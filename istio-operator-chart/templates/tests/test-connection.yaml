@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "istio-operator-chart.fullname" . }}-test-connection"
+  labels:
+    {{- include "istio-operator-chart.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "istio-operator-chart.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
