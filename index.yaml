@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  istio-operator-chart:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-10-25T16:57:59.109531Z"
+    description: A Helm chart for Kubernetes
+    digest: 3dff9d9d3bcbd1006ebf0dc679eddff088f8f234054766bee02ca86381be69fc
+    name: istio-operator-chart
+    type: application
+    urls:
+    - https://srodi.github.io/istio-operator/istio-operator-chart-0.1.0.tgz
+    version: 0.1.0
+generated: "2020-10-25T16:57:59.105755Z"

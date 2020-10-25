@@ -1,2 +1,5 @@
 istio-*.*.*/
 .DS_Store
+istio-operator-chart/
+istio-system/
+
