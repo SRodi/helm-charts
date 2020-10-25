@@ -1,3 +1,5 @@
+[![Artifact HUB](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/istio-operator)](https://artifacthub.io/packages/search?repo=istio-operator)
+
 ## Install Istio using GitOps
 
 Istio operator manifest for installation/update of Istio using GitOps tools like Flux or ArgoCD.
