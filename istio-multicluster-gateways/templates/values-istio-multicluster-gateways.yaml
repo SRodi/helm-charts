@@ -1,6 +1,7 @@
 apiVersion: install.istio.io/v1alpha1
 kind: IstioOperator
 spec:
+  namespace: istio-system
   addonComponents:
     istiocoredns:
       enabled: true
