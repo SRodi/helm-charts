@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: srodi-namespace
+  namespace: simone
+  labels:
+    istio-injection: enabled
