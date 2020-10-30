@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: srodi
+  namespace: simone
+spec:
+  selector:
+    matchLabels:
+      app: srodi
+  template:
+    metadata:
+      labels:
+        app: srodi
+    spec:
+      containers:
+      - name: srodi
+        image: luksa/kubia:v1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
