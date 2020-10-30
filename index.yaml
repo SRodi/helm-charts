@@ -9,7 +9,7 @@ entries:
     name: istio-operator-chart
     type: application
     urls:
-    - https://srodi.github.io/istio-operator/istio-operator-chart-0.1.0.tgz
+    - https://srodi.github.io/helm-charts/istio-operator-chart-0.1.0.tgz
     version: 0.1.0
   istio-system:
   - apiVersion: v2
@@ -20,7 +20,7 @@ entries:
     name: istio-system-chart
     type: application
     urls:
-    - https://srodi.github.io/istio-operator/istio-system-0.1.0.tgz
+    - https://srodi.github.io/helm-charts/istio-system-0.1.0.tgz
     version: 0.1.0
   kubia:
   - apiVersion: v2
@@ -31,7 +31,7 @@ entries:
     name: kubia-chart
     type: application
     urls:
-    - https://srodi.github.io/istio-operator/kubia-0.1.0.tgz
+    - https://srodi.github.io/helm-charts/kubia-0.1.0.tgz
     version: 0.1.0
 
 generated: "2020-10-25T16:57:59.105755Z"
