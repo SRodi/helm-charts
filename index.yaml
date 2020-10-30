@@ -6,11 +6,32 @@ entries:
     created: "2020-10-25T16:57:59.109531Z"
     description: A Helm chart for Kubernetes
     digest: 3dff9d9d3bcbd1006ebf0dc679eddff088f8f234054766bee02ca86381be69fc
-    name: istio-chart
+    name: istio-operator-chart
     type: application
     urls:
     - https://srodi.github.io/istio-operator/istio-operator-chart-0.1.0.tgz
+    version: 0.1.0
+  istio-system:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-10-25T16:57:59.109531Z"
+    description: A Helm chart for Kubernetes
+    digest: 3dff9d9d3bcbd1006ebf0dc679eddff088f8f234054766bee02ca86381be69fc
+    name: istio-system-chart
+    type: application
+    urls:
     - https://srodi.github.io/istio-operator/istio-system-0.1.0.tgz
+    version: 0.1.0
+  kubia:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-10-25T16:57:59.109531Z"
+    description: A Helm chart for Kubernetes
+    digest: 3dff9d9d3bcbd1006ebf0dc679eddff088f8f234054766bee02ca86381be69fc
+    name: kubia-chart
+    type: application
+    urls:
     - https://srodi.github.io/istio-operator/kubia-0.1.0.tgz
     version: 0.1.0
+
 generated: "2020-10-25T16:57:59.105755Z"
