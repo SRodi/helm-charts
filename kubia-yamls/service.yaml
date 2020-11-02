@@ -5,7 +5,9 @@ metadata:
   namespace: simone
 spec:
   ports:
-  - port: 80
-    targetPort: 8080
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 8080
   selector:
       app: srodi

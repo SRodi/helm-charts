@@ -1,0 +1,41 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: srodi-gateway
+spec:
+  selector:
+    istio: ingressgateway # use istio default controller
+  servers:
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+    - "*"
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: srodi
+spec:
+  hosts:
+  - "*"
+  gateways:
+  - srodi-gateway
+  http:
+  - match:
+    - uri:
+        exact: /test1
+    route:
+    - destination:
+        host: srodi-service
+        subset: v1
+        port:
+          number: 80
+      weight: 10
+    - destination:
+        host: srodi-service
+        subset: v2
+        port:
+          number: 80
+      weight: 90

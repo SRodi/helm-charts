@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: srodi-deployment
+  name: srodi-deployment-v1
   namespace: simone
 spec:
   selector:
@@ -11,10 +11,36 @@ spec:
     metadata:
       labels:
         app: srodi
+        version: v1
     spec:
       containers:
       - name: srodi
         image: luksa/kubia:v1
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+        ports:
+        - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: srodi-deployment-v2
+  namespace: simone
+spec:
+  selector:
+    matchLabels:
+      app: srodi
+  template:
+    metadata:
+      labels:
+        app: srodi
+        version: v2
+    spec:
+      containers:
+      - name: srodi
+        image: luksa/kubia:v2
         resources:
           limits:
             memory: "128Mi"
